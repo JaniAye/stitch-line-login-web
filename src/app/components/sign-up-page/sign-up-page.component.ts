@@ -29,7 +29,8 @@ export class SignUpPageComponent implements OnInit {
 
 
   signup:Account= new Account();
-
+  isDisablednic:boolean = true;
+  isDisabledaddress:boolean = false;
 
   constructor(private signUpService:SignupService) { }
 
@@ -37,9 +38,23 @@ export class SignUpPageComponent implements OnInit {
   }
 
   userSignUp(){
-    console.log(this.signup)
+
     this.signUpService.addUser(this.signup).subscribe(data => {
       alert("User Added...")
     },error => alert("Error"))
+  }
+
+  createUser(){
+    this.userType="Customer";
+    this.isDisablednic = true
+    this.isDisabledaddress=false
+
+  }
+
+  createAdmin(){
+    this.userType="Admin";
+    this.isDisablednic = false
+    this.isDisabledaddress=true
+
   }
 }
