@@ -25,46 +25,44 @@
 
 
 
-
+ <form (ngSubmit)="userSignUp()">
     <div class="container2">
       <div class="row">
         <div class="col">
           <div class="inputs">
-
-
             <div class="input">
-              <input type="text" name="name" id="name" required/>
+              <input type="text" [(ngModel)]="signup.name" name="name" id="name" required/>
               <label for="name">
                 Name
               </label>
             </div>
             <div class="input">
-              <input type="text" name="email" id="email" required/>
+              <input type="text" [(ngModel)]="signup.email" name="email" id="email" required/>
               <label for="email">
                 Email
               </label>
             </div>
             <div class="input">
-              <input type="text" name="mobile" id="mobile" required/>
+              <input type="text" [(ngModel)]="signup.mobile" name="mobile" id="mobile" required/>
               <label for="mobile">
                 Mobile
               </label>
             </div>
             <div class="input">
-              <input type="text" name="userName" id="userName" required/>
+              <input type="text" [(ngModel)]="signup.userName" name="userName" id="userName" required/>
               <label for="userName">
                 User Name
               </label>
             </div>
             <div class="input">
-              <input type="text" name="password" id="password" required/>
+              <input type="text" [(ngModel)]="signup.password" name="password" id="password" required/>
               <label for="password">
                 Password
               </label>
             </div>
 
             <div class="input">
-              <input type="text" name="confirmps" id="confirmps" required/>
+              <input type="text" [(ngModel)]="signup.userType" name="confirmps" id="confirmps" required/>
               <label for="confirmps">
                 Confirm Password
               </label>
@@ -75,20 +73,20 @@
         <div class="col">
           <div id="col2">
             <div class="input">
-              <input type="text" name="address" id="address" required/>
+              <input type="text" [(ngModel)]="signup.address" name="address" id="address" required/>
               <label for="address">
                 Address
               </label>
             </div>
             <div class="input">
-              <input type="text" name="nic" id="nic" required/>
+              <input type="text" [(ngModel)]="signup.nic" name="nic" id="nic" required/>
               <label for="nic">
                 Nic
               </label>
             </div>
 
             <div class="input">
-              <input type="text" name="empNo" id="empNo" required/>
+              <input type="text" [(ngModel)]="signup.empNo" name="empNo" id="empNo" required/>
               <label for="empNo">
                 Employee Number
               </label>
@@ -103,7 +101,8 @@
 
 
 
-  <button >Create Account</button>
+  <button type="submit">Create Account</button>
+ </form>
   <button routerLink="/login">Login</button>
 </div>
 

@@ -11,11 +11,13 @@ import {MatRadioModule} from "@angular/material/radio";
 import {FormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {LoginService} from "./components/login-form/login.service";
+import { AdminPageComponent } from './components/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-  routingComponents
+  routingComponents,
+  AdminPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Login} from "./login";
 import {LoginService} from "./login.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-form',
@@ -8,12 +9,12 @@ import {LoginService} from "./login.service";
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
-  login:Login[]=[];
+
   user:Login= new Login();
 
   invalidLogin = false
 
-  constructor(private loginService:LoginService) {
+  constructor(private loginService:LoginService, private router: Router) {
     // this.login=[];
   }
 
@@ -24,7 +25,14 @@ export class LoginFormComponent implements OnInit {
   userLogin(){
     console.log(this.user)
     this.loginService.getUser(this.user).subscribe(data => {
-      alert("login successfull")
+
+      if (data.userType=="Customer"){
+        this.router.navigate(['/home']);
+      }else {
+        this.router.navigate(['/admin']);
+      }
+
+
     },error => alert("Incorrect user name or password"))
   }
 
