@@ -1,0 +1,109 @@
+<div class="container">
+
+
+    <div class="intro-text">
+      <h1>Create Account</h1>
+    </div>
+
+  <section class="example-section">
+    <label class="example-margin">User Type :</label>
+    <mat-radio-group [(ngModel)]="labelPosition">
+      <mat-radio-button class="example-margin" value="after" checked>Customer</mat-radio-button>
+      <mat-radio-button class="example-margin" value="before">Admin</mat-radio-button>
+    </mat-radio-group>
+  </section>
+
+<!--  <div class="form-check">-->
+
+<!--    <input type="radio" class="radio"  id="radio1" name="optradio" value="Admin" [(ngModel)]="admin" checked>Admin-->
+<!--    <label class="radio" for="radio1"></label>-->
+<!--  </div>-->
+<!--  <div class="form-check">-->
+<!--    <input type="radio" class="radio" id="radio2" name="optradio" value="Customer" [(ngModel)]="customer">Customer-->
+<!--    <label class="radio" for="radio2"></label>-->
+<!--  </div>-->
+
+
+
+
+    <div class="container2">
+      <div class="row">
+        <div class="col">
+          <div class="inputs">
+
+
+            <div class="input">
+              <input type="text" name="name" id="name" required/>
+              <label for="name">
+                Name
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="email" id="email" required/>
+              <label for="email">
+                Email
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="mobile" id="mobile" required/>
+              <label for="mobile">
+                Mobile
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="userName" id="userName" required/>
+              <label for="userName">
+                User Name
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="password" id="password" required/>
+              <label for="password">
+                Password
+              </label>
+            </div>
+
+            <div class="input">
+              <input type="text" name="confirmps" id="confirmps" required/>
+              <label for="confirmps">
+                Confirm Password
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div id="col2">
+            <div class="input">
+              <input type="text" name="address" id="address" required/>
+              <label for="address">
+                Address
+              </label>
+            </div>
+            <div class="input">
+              <input type="text" name="nic" id="nic" required/>
+              <label for="nic">
+                Nic
+              </label>
+            </div>
+
+            <div class="input">
+              <input type="text" name="empNo" id="empNo" required/>
+              <label for="empNo">
+                Employee Number
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+  <button >Create Account</button>
+  <button routerLink="/login">Login</button>
+</div>
+
