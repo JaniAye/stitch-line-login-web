@@ -9,6 +9,8 @@ import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.comp
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from "@angular/material/radio";
 import {FormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {LoginService} from "./components/login-form/login.service";
 
 @NgModule({
   declarations: [
@@ -20,10 +22,11 @@ import {FormsModule} from "@angular/forms";
     AppRoutingModule,
     NoopAnimationsModule,
     MatRadioModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
